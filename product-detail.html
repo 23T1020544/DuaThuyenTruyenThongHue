@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Phẩm - Ghe Đua Truyền Thống Huế</title>
+    <!-- Modern Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: var(--bg-light);">
+
+    <!-- Navigation -->
+    <nav class="navbar text-white" style="background: var(--primary-blue);">
+        <div class="logo">
+            <i class="fa-solid fa-water"></i> HUE RACING
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html" class="active">Sản Phẩm</a></li>
+            <li><a href="index.html#about">Lịch sử</a></li>
+            <li><a href="index.html#contact">Liên hệ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon" id="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge-count">0</span>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section" style="padding: 120px 0 6rem;">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a> &gt; <a href="products.html">Sản Phẩm</a> &gt; <span>Thuyền Rồng (Ngự
+                    Chu)</span>
+            </div>
+
+            <div class="product-detail-grid">
+                <!-- Image Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image bg-7" id="mainImage">
+                        <!-- Main image will be loaded dynamically or fall back to this -->
+                    </div>
+                    <div class="thumbnail-list">
+                        <div class="thumbnail bg-7 active-thumb" onclick="changeImage('bg-7')"></div>
+                        <div class="thumbnail bg-2" onclick="changeImage('bg-2')"></div>
+                        <div class="thumbnail bg-1" onclick="changeImage('bg-1')"></div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info-full">
+                    <span class="category-label">Ghe Cung Đình</span>
+                    <h1 class="product-title" id="productTitle">Thuyền Rồng (Ngự Chu)</h1>
+
+                    <div class="reviews">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(12 Đánh giá)</span>
+                    </div>
+
+                    <div class="price-block">
+                        <span class="current-price" id="productPrice">450.000.000 đ</span>
+                        <span class="original-price">500.000.000 đ</span>
+                    </div>
+
+                    <p class="product-description">
+                        Chiếc ghe được phục dựng tỉ mỉ theo nguyên bản cung đình Huế dưới triều Nguyễn. Toàn bộ thân tàu
+                        được làm từ
+                        những loại gỗ quý hiếm, trải qua quá trình xử lý thủ công tinh xảo để chống lại sự bào mòn của
+                        nước.
+                        Đầu rồng và đuôi én được chạm khắc sống động bởi các nghệ nhân lành nghề nhất vùng đất Kinh kỳ.
+                    </p>
+
+                    <ul class="specs-list">
+                        <li><i class="fa-solid fa-ruler-combined"></i> <strong>Kích thước:</strong> Dài 15m, Rộng 2m
+                        </li>
+                        <li><i class="fa-solid fa-tree"></i> <strong>Chất liệu:</strong> Gỗ Sao, Gỗ Kiền Kiền</li>
+                        <li><i class="fa-solid fa-users"></i> <strong>Sức chứa:</strong> 15-20 người</li>
+                        <li><i class="fa-solid fa-clock"></i> <strong>Thời gian chế tác:</strong> 6 tháng</li>
+                    </ul>
+
+                    <div class="purchase-actions">
+                        <div class="quantity-selector">
+                            <button type="button" class="qty-btn minus" onclick="updateQty(-1)"><i
+                                    class="fa-solid fa-minus"></i></button>
+                            <input type="number" id="qtyInput" value="1" min="1" max="10">
+                            <button type="button" class="qty-btn plus" onclick="updateQty(1)"><i
+                                    class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <button class="btn-primary add-to-cart-large" id="addToCartBtn" data-id="1"
+                            data-name="Thuyền Rồng (Ngự Chu)" data-price="450000000" data-img="bg-7">
+                            <i class="fa-solid fa-cart-arrow-down"></i> Thêm Vào Giỏ Hàng
+                        </button>
+                        <button class="btn-outline wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="delivery-info">
+                        <div class="info-item">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <div>
+                                <h4>Giao Hàng Đặc Biệt</h4>
+                                <p>Hỗ trợ vận chuyển tận nơi bằng đường thủy hoặc xe chuyên dụng.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <h4>Bảo Hành 5 Năm</h4>
+                                <p>Bảo hành phần kết cấu và nước sơn son thếp vàng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <button class="tab-btn active" onclick="openTab(event, 'Description')">Mô Tả Chi Tiết</button>
+                    <button class="tab-btn" onclick="openTab(event, 'History')">Lịch Sử Chế Tác</button>
+                    <button class="tab-btn" onclick="openTab(event, 'Reviews')">Đánh Giá (12)</button>
+                </div>
+
+                <div id="Description" class="tab-content default-open">
+                    <h3>Chi Tiết Sản Phẩm</h3>
+                    <p>Khám phá kiệt tác thủ công đỉnh cao mang đậm dấu ấn văn hóa của Cố đô Huế. Mỗi chiếc Thuyền Rồng
+                        không chỉ là một phương tiện giao thông đường thủy mà còn là một tác phẩm nghệ thuật, kết tinh
+                        từ đôi bàn tay tài hoa của các nghệ nhân truyền thống.</p>
+                    <p>Sơn son thếp vàng là một trong những kỹ thuật trang trí tiêu biểu nhất được áp dụng trên con
+                        thuyền này, giúp bảo vệ lớp gỗ bên trong đồng thời mang lại vẻ đẹp uy nghi, lộng lẫy.</p>
+                </div>
+
+                <div id="History" class="tab-content" style="display:none;">
+                    <h3>Giá Trị Lịch Sử</h3>
+                    <p>Trong quá khứ, Ngự Chu chỉ dành riêng cho Vua và Hoàng thất dùng trong các dịp tuần du trên sông
+                        Hương hoặc các nghi lễ tế giao quan trọng. Ngày nay, việc phục dựng và sử dụng Thuyền Rồng trong
+                        các kỳ Festival Huế giúp tôn vinh bảo tồn giá trị di sản phi vật thể.</p>
+                </div>
+
+                <div id="Reviews" class="tab-content" style="display:none;">
+                    <h3>Đánh Giá Của Khách Hàng</h3>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <strong>Nguyễn Văn A</strong> <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        </div>
+                        <p>Tuyệt tác nghệ thuật! Các chi tiết gỗ được chạm trổ vô cùng tinh xảo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-water"></i> HUE RACING
+                </div>
+                <p>Bảo tồn và phát huy giá trị văn hóa đua ghe truyền thống của vùng đất Cố Đô.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Khám Phá</h4>
+                <ul>
+                    <li><a href="products.html">Sản Phẩm</a></li>
+                    <li><a href="index.html#about">Lịch sử</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Liên Hệ</h4>
+                <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@hueracing.vn</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Specific script for product details
+        function updateQty(change) {
+            const input = document.getElementById('qtyInput');
+            let val = parseInt(input.value) + change;
+            if (val < 1) val = 1;
+            input.value = val;
+        }
+
+        function changeImage(bgClass) {
+            const mainImg = document.getElementById('mainImage');
+            mainImg.className = 'main-image ' + bgClass;
+
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active-thumb'));
+            event.target.classList.add('active-thumb');
+        }
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>

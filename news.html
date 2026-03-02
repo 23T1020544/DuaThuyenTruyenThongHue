@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức Lễ Hội - Ghe Đua Truyền Thống Huế</title>
+    <!-- Modern Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .news-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.8rem;
+            display: flex;
+            gap: 15px;
+        }
+
+        .news-title {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--accent-red);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .read-more i {
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        .featured-news {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 4rem;
+        }
+
+        .featured-image {
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+        }
+
+        .featured-content {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 992px) {
+            .featured-news {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                min-height: 300px;
+            }
+
+            .featured-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: var(--bg-light);">
+
+    <!-- Navigation -->
+    <nav class="navbar text-white" style="background: var(--glass-bg); backdrop-filter: blur(10px);">
+        <div class="logo">
+            <i class="fa-solid fa-water"></i> HUE RACING
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Sản Phẩm</a></li>
+            <li><a href="index.html#about">Lịch sử</a></li>
+            <li><a href="index.html#contact">Liên hệ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon" id="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge-count">0</span>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header"
+        style="background: linear-gradient(rgba(10, 58, 94, 0.8), rgba(10, 58, 94, 0.8)), url('images/duaghe2-9.jpg') center/cover; padding: 150px 0 80px;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 3.5rem;">Tin Tức & Sự Kiện</h1>
+            <p class="hero-subtitle">Cập nhật thông tin mới nhất về lễ hội đua ghe truyền thống trên sông Hương.</p>
+        </div>
+    </header>
+
+    <!-- News Section -->
+    <section class="news-section section-padding" style="padding: 4rem 0 6rem;">
+        <div class="container">
+
+            <!-- Featured News -->
+            <article class="featured-news">
+                <div class="featured-image bg-10"></div>
+                <div class="featured-content">
+                    <div class="news-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 25 Tháng 8, 2026</span>
+                        <span><i class="fa-solid fa-tag"></i> Sự kiện nổi bật</span>
+                    </div>
+                    <h2 class="news-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Lễ hội đua ghe truyền thống
+                        trên sông Hương dịp Quốc khánh 2-9</h2>
+                    <p class="news-excerpt" style="font-size: 1.1rem; margin-bottom: 2rem;">Hàng vạn người dân và du
+                        khách đã đổ về hai bên bờ sông Hương từ sáng sớm để đón chờ giải đua ghe truyền thống tỉnh Thừa
+                        Thiên Huế mừng lễ Quốc khánh môn tưng bừng, rộn rã.</p>
+                    <a href="#" class="read-more" style="font-size: 1rem;">Đọc toàn bộ bài viết <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <h2 class="section-heading" style="font-size: 2rem;">Tin Tức Mới Nhất</h2>
+            <div class="heading-underline"></div>
+
+            <!-- News Grid -->
+            <div class="news-grid">
+
+                <!-- Card 1 -->
+                <article class="news-card">
+                    <div class="news-image bg-9"></div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 10 Tháng 8, 2026</span>
+                            <span><i class="fa-solid fa-folder"></i> Chuẩn bị</span>
+                        </div>
+                        <h3 class="news-title">Các Phường ráo riết hạ thủy ghe đua luyện tập tập trung</h3>
+                        <p class="news-excerpt">Không khí tập luyện của các tay chèo vạm vỡ đang nóng lên từng ngày trên
+                            các khúc sông Hương trước thềm giải đấu lớn.</p>
+                        <a href="#" class="read-more">Đọc tiếp <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="news-card">
+                    <div class="news-image bg-7"></div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 5 Tháng 8, 2026</span>
+                            <span><i class="fa-solid fa-folder"></i> Văn hóa</span>
+                        </div>
+                        <h3 class="news-title">Nghệ nhân tiết lộ bí quyết sơn son thếp vàng Thuyền Rồng</h3>
+                        <p class="news-excerpt">Tìm hiểu quá trình tạo nên vẻ đẹp lộng lẫy uy nghi của những chiếc Ngự
+                            Chu cung đình xưa từ bàn tay người thợ tài hoa.</p>
+                        <a href="#" class="read-more">Đọc tiếp <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="news-card">
+                    <div class="news-image bg-3"></div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 20 Tháng 7, 2026</span>
+                            <span><i class="fa-solid fa-folder"></i> Góc nhìn</span>
+                        </div>
+                        <h3 class="news-title">Sức mạnh của những bóng hồng xứ Huế trên đường đua xanh</h3>
+                        <p class="news-excerpt">Đua ghe không chỉ dành cho phái mạnh. Những giải "bơi" nữ luôn mang lại
+                            cảm xúc mãnh liệt và sự ngưỡng mộ cho khán giả.</p>
+                        <a href="#" class="read-more">Đọc tiếp <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-water"></i> HUE RACING
+                </div>
+                <p>Bảo tồn và phát huy giá trị văn hóa đua ghe truyền thống của vùng đất Cố Đô.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Khám Phá</h4>
+                <ul>
+                    <li><a href="products.html">Sản Phẩm</a></li>
+                    <li><a href="index.html#about">Lịch sử</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Liên Hệ</h4>
+                <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@hueracing.vn</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

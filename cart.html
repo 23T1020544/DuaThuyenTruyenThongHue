@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Ghe Đua Truyền Thống Huế</title>
+    <!-- Modern Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: var(--bg-light);">
+
+    <!-- Navigation -->
+    <nav class="navbar text-white" style="background: var(--primary-blue);">
+        <div class="logo">
+            <i class="fa-solid fa-water"></i> HUE RACING
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Sản Phẩm</a></li>
+            <li><a href="index.html#about">Lịch sử</a></li>
+            <li><a href="index.html#contact">Liên hệ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon active" id="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge-count">0</span>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Header -->
+    <header class="page-header"
+        style="background: linear-gradient(rgba(10, 58, 94, 0.8), rgba(10, 58, 94, 0.8)), url('images/ghe1.jpg') center/cover; padding: 120px 0 60px;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 3rem;">Giỏ Hàng Của Bạn</h1>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section" style="padding: 2rem 0 6rem;">
+        <div class="container">
+
+            <div id="cart-empty-message" class="text-center" style="display: none; padding: 3rem 0;">
+                <i class="fa-solid fa-cart-arrow-down" style="font-size: 4rem; color: #ccc; margin-bottom: 2rem;"></i>
+                <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">Giỏ hàng trống</h2>
+                <p style="color: #666; margin-bottom: 2rem;">Bạn chưa chọn mua sản phẩm nào.</p>
+                <a href="products.html" class="btn-primary">Tiếp tục mua sắm</a>
+            </div>
+
+            <div class="cart-container" id="cart-content" style="display: flex; gap: 3rem; flex-wrap: wrap;">
+
+                <!-- Cart Items List -->
+                <div class="cart-items" style="flex: 2; min-width: 60%;">
+                    <div class="cart-table-header">
+                        <div class="col-product">Sản Phẩm</div>
+                        <div class="col-price">Đơn Giá</div>
+                        <div class="col-qty">Số Lượng</div>
+                        <div class="col-total">Tạm Tính</div>
+                        <div class="col-action"></div>
+                    </div>
+
+                    <div id="cart-items-container">
+                        <!-- Dynamic items will be added here via JS -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" style="flex: 1; min-width: 300px;">
+                    <div class="summary-box">
+                        <h3>Tổng Đơn Hàng</h3>
+
+                        <div class="summary-row">
+                            <span>Tạm tính:</span>
+                            <span id="summary-subtotal">0 đ</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Phí vận chuyển:</span>
+                            <span>Liên hệ</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row total">
+                            <span>Tổng cộng:</span>
+                            <span id="summary-total" class="total-price">0 đ</span>
+                        </div>
+
+                        <a href="checkout.html" class="btn-primary checkout-btn"
+                            style="width: 100%; display: block; text-align: center; margin-top: 2rem;">Tiến Hành Thanh
+                            Toán</a>
+                        <a href="products.html" class="btn-outline"
+                            style="width: 100%; display: block; text-align: center; margin-top: 1rem; border: none; font-size: 0.9rem;"><i
+                                class="fa-solid fa-arrow-left"></i> Tiếp tục mua sắm</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-water"></i> HUE RACING
+                </div>
+                <p>Bảo tồn và phát huy giá trị văn hóa đua ghe truyền thống của vùng đất Cố Đô.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Khám Phá</h4>
+                <ul>
+                    <li><a href="products.html">Sản Phẩm</a></li>
+                    <li><a href="index.html#about">Lịch sử</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Liên Hệ</h4>
+                <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@hueracing.vn</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Inline script to render cart items since script.js will handle the logic
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderCartPage === 'function') {
+                renderCartPage();
+            }
+        });
+    </script>
+</body>
+
+</html>

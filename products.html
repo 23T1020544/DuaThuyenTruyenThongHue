@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - Ghe Đua Truyền Thống Huế</title>
+    <!-- Modern Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar text-white">
+        <div class="logo">
+            <i class="fa-solid fa-water"></i> HUE RACING
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html" class="active">Sản Phẩm</a></li>
+            <li><a href="index.html#about">Lịch sử</a></li>
+            <li><a href="index.html#contact">Liên hệ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon" id="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge-count">0</span>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header"
+        style="background: linear-gradient(rgba(10, 58, 94, 0.8), rgba(10, 58, 94, 0.8)), url('images/ghe2.jpg') center/cover;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 3.5rem;">Cửa Hàng Ghe Truyền Thống</h1>
+            <p class="hero-subtitle">Bảo tồn và phát huy giá trị di sản qua từng chi tiết chế tác thủ công.</p>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section section-padding" style="padding: 4rem 0; background-color: var(--bg-light);">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="racing">Ghe Đua</button>
+                <button class="filter-btn" data-filter="royal">Thuyền Cung Đình</button>
+                <button class="filter-btn" data-filter="fishing">Ghe Làng Chài</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+
+                <!-- Product Card 1 -->
+                <div class="product-card" data-category="royal">
+                    <div class="product-image bg-7">
+                        <div class="product-badges">
+                            <span class="badge premium">Cao Cấp</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Thuyền Rồng (Ngự Chu)</h3>
+                        <p class="product-desc">Ghe phục dựng theo nguyên bản cung đình Huế, sơn son thếp vàng.</p>
+                        <div class="product-price">
+                            <span class="price">450.000.000 đ</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html?id=1" class="btn-outline">Xem chi tiết</a>
+                            <button class="btn-primary add-to-cart-btn" data-id="1" data-name="Thuyền Rồng (Ngự Chu)"
+                                data-price="450000000" data-img="bg-7"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card" data-category="racing">
+                    <div class="product-image bg-2">
+                    </div>
+                    <div class="product-info">
+                        <h3>Thuyền Trải (Đua Trải)</h3>
+                        <p class="product-desc">Loại ghe đua thân dài vát nhọn, thích hợp đội hình 11 - 15 tay chèo.</p>
+                        <div class="product-price">
+                            <span class="price">120.000.000 đ</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html?id=2" class="btn-outline">Xem chi tiết</a>
+                            <button class="btn-primary add-to-cart-btn" data-id="2" data-name="Thuyền Trải (Đua Trải)"
+                                data-price="120000000" data-img="bg-2"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card" data-category="racing">
+                    <div class="product-image bg-3">
+                        <div class="product-badges">
+                            <span class="badge popular">Bán Chạy</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ghe Bơi (Đua Nữ)</h3>
+                        <p class="product-desc">Ghe nhẹ, thanh thoát, chế tác từ gỗ sao nguyên khối, chống thấm tốt.</p>
+                        <div class="product-price">
+                            <span class="price">85.000.000 đ</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html?id=3" class="btn-outline">Xem chi tiết</a>
+                            <button class="btn-primary add-to-cart-btn" data-id="3" data-name="Ghe Bơi (Đua Nữ)"
+                                data-price="85000000" data-img="bg-3"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card" data-category="fishing">
+                    <div class="product-image bg-4">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ghe Lườn (Độc Mộc)</h3>
+                        <p class="product-desc">Ghe dân dã từ thân gỗ lớn, chịu sóng gió tốt vùng phá Tam Giang.</p>
+                        <div class="product-price">
+                            <span class="price">45.000.000 đ</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html?id=4" class="btn-outline">Xem chi tiết</a>
+                            <button class="btn-primary add-to-cart-btn" data-id="4" data-name="Ghe Lườn (Độc Mộc)"
+                                data-price="45000000" data-img="bg-4"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card" data-category="fishing">
+                    <div class="product-image bg-5">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ghe Làng (Ghe Bạn)</h3>
+                        <p class="product-desc">Trang trí màu cờ riêng biệt, tính biểu tượng cao của từng làng ven sông.
+                        </p>
+                        <div class="product-price">
+                            <span class="price">90.000.000 đ</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html?id=5" class="btn-outline">Xem chi tiết</a>
+                            <button class="btn-primary add-to-cart-btn" data-id="5" data-name="Ghe Làng (Ghe Bạn)"
+                                data-price="90000000" data-img="bg-5"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card" data-category="racing">
+                    <div class="product-image bg-9">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ghe Đồng Đội 9 Người</h3>
+                        <p class="product-desc">Kích thước chuẩn thi đấu lễ hội đua ghe Thừa Thiên Huế.</p>
+                        <div class="product-price">
+                            <span class="price">110.000.000 đ</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html?id=6" class="btn-outline">Xem chi tiết</a>
+                            <button class="btn-primary add-to-cart-btn" data-id="6" data-name="Ghe Đồng Đội 9 Người"
+                                data-price="110000000" data-img="bg-9"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-water"></i> HUE RACING
+                </div>
+                <p>Bảo tồn và phát huy giá trị văn hóa đua ghe truyền thống của vùng đất Cố Đô.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Khám Phá</h4>
+                <ul>
+                    <li><a href="products.html">Sản Phẩm</a></li>
+                    <li><a href="index.html#about">Lịch sử</a></li>
+                    <li><a href="index.html#gallery">Bộ sưu tập</a></li>
+                    <li><a href="#">Luật đua</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Liên Hệ</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Bến thuyền Sông Hương, TP. Huế, Việt Nam</p>
+                <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@hueracing.vn</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hue Traditional Boat Racing.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghe Đua Truyền Thống Huế</title>
+    <!-- Modern Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar text-white">
+        <div class="logo">
+            <i class="fa-solid fa-water"></i> HUE RACING
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Trang chủ</a></li>
+            <li><a href="products.html">Sản Phẩm</a></li>
+            <li><a href="#about">Lịch sử</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon" id="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge-count">0</span>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Âm Vang Sông Hương</h1>
+            <p class="hero-subtitle">Khám phá vẻ đẹp kiêu hùng và nét văn hóa độc đáo của nghệ thuật đua ghe truyền
+                thống xứ Huế.</p>
+            <a href="#about" class="cta-button">Khám Phá Ngay</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fa-solid fa-chevron-down down-arrow"></i>
+        </div>
+    </header>
+
+    <!-- Schedule Section (New) -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading">Lịch Trình Lễ Hội</h2>
+                <div class="heading-underline mx-auto"></div>
+                <p class="section-desc">Theo dõi các mốc thời gian quan trọng trong Lễ Hội Đua Ghe Truyền Thống trên
+                    sông Hương năm nay.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content box-shadow">
+                        <div class="time-badge"><i class="fa-regular fa-clock"></i> 06:00 - Ngày 2/9</div>
+                        <h3>Lễ Tế Thủy Thần (Cáo Giang)</h3>
+                        <p>Các bô lão và đại diện các đội đua tiến hành làm lễ dâng hương, đọc văn tế cầu mong thời tiết
+                            thuận lợi, cuộc đua an toàn, may mắn. Ngự Chu (Thuyền Tế) sẽ đi dọc sông Hương làm lễ.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content box-shadow">
+                        <div class="time-badge"><i class="fa-regular fa-clock"></i> 07:00 - Ngày 2/9</div>
+                        <h3>Khai Mạc & Đọc điều lệ </h3>
+                        <p>Đánh trống khai hội vang dội khúc sông.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content box-shadow">
+                        <div class="time-badge"><i class="fa-regular fa-clock"></i> 08:00 - Ngày 2/9</div>
+                        <h3>Độ Cúng (Vòng Loại Suy Tôn)</h3>
+                        <p>Chặng đua đầu tiên và quan trọng mang ý nghĩa tâm linh sâu sắc. Đội về nhất Độ Cúng được xem
+                            là mang lại điềm lành, mùa màng bội thu cho làng năm đó.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content box-shadow">
+                        <div class="time-badge"><i class="fa-regular fa-clock"></i> 09:30 - Ngày 2/9</div>
+                        <h3>Độ Tiền (Các Hạng Mục Thi Đấu)</h3>
+                        <p>Gồm nhiều vòng đua hấp dẫn: đua ghe bơi (dành cho nữ), đua trải (thuyền dài), đua ghe đồng
+                            đội (9-11 tay chèo). Tốc độ xé nước cùng tiếng hò reo cổ vũ vang dậy.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content box-shadow">
+                        <div class="time-badge"><i class="fa-regular fa-clock"></i> 11:30 - Ngày 2/9</div>
+                        <h3>Độ Phá & Trao Giải Truyền Thống</h3>
+                        <p>Vòng đua cuối cùng quyết định nhà vô địch chung cuộc. Lễ trao cờ luân lưu, phần thưởng cống
+                            hiến và bế mạc lễ hội bốc lửa giữa trưa hè xứ Huế.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section hidden fade-up">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2 class="section-heading">Lịch Sử Hào Hùng</h2>
+                <div class="heading-underline"></div>
+                <p>Nghề chơi ghe đua ở Huế không chỉ là một môn thể thao, mà còn là một nét đẹp văn hóa tâm linh gắn
+                    liền với đời sống của người dân đôi bờ sông Hương.</p>
+                <p>Những chiếc ghe mang hình dáng đầu rồng uy nghi, lướt sóng như bay trong tiếng trống múa lân xập xình
+                    và tiếng hò reo vang dậy cả một khúc sông, thể hiện sức mạnh, sự đoàn kết và khát vọng bình yên, mùa
+                    màng bội thu.</p>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Chế tác thủ công tinh xảo</li>
+                    <li><i class="fa-solid fa-check"></i> Điêu khắc họa tiết cung đình</li>
+                    <li><i class="fa-solid fa-check"></i> Lễ hội cầu an truyền thống</li>
+                </ul>
+            </div>
+            <div class="about-image-wrapper">
+                <div class="about-image"></div>
+                <div class="experience-badge">
+                    <span class="number">100+</span>
+                    <span class="text">Năm Lịch sử</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container text-center">
+            <h2 class="section-heading">Tuyệt Tác Trên Sông</h2>
+            <div class="heading-underline mx-auto"></div>
+            <p class="section-desc">Mỗi chiếc ghe đua là một tác phẩm nghệ thuật, mang một linh hồn và câu chuyện riêng
+                biệt.</p>
+
+            <div class="gallery-slider-container">
+                <div class="gallery-track">
+                    <!-- Card 1 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-1"></div>
+                        <div class="card-content">
+                            <h3>Thuyền Rồng (Ghe Rồng)</h3>
+                            <p>Đầu rồng đuôi én oai vệ, vốn là ngự thuyền của vua chúa triều Nguyễn xưa. Nay là biểu
+                                tượng không thể thiếu trong các lễ hội lớn trên sông Hương.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-2"></div>
+                        <div class="card-content">
+                            <h3>Thuyền Trải (Đua Trải)</h3>
+                            <p>Loại ghe đua thân dài, thon và vuốt nhọn ở hai đầu để xé nước lướt sóng nhanh. Yêu cầu sự
+                                phối hợp nhịp nhàng của nhiều tay chèo.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-3"></div>
+                        <div class="card-content">
+                            <h3>Ghe Bơi (Dành cho Nữ)</h3>
+                            <p>Các giải đua cổ truyền thường gọi phần thi của nữ là "bơi" thay vì "đua". Ghe nhỏ, nhẹ
+                                hơn, tôn vinh sự dẻo dai và nhịp nhàng của phụ nữ Huế.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-4"></div>
+                        <div class="card-content">
+                            <h3>Ghe Lườn (Độc Mộc)</h3>
+                            <p>Loại ghe làm từ những thân gỗ lớn khoét ruột, được xem là dạng nguyên sơ nhất của ghe
+                                thuyền truyền thống trên phá Tam Giang.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-5"></div>
+                        <div class="card-content">
+                            <h3>Ghe Làng (Ghe Bạn)</h3>
+                            <p>Được các làng ven sông (Làng Sình, Thần Phù, Thai Dương Hạ...) chung tay đóng, trang trí
+                                màu cờ và họa tiết riêng biệt, đại diện cho niềm tự hào của làng.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-6"></div>
+                        <div class="card-content">
+                            <h3>Ghe Chài (Lễ Hội Cầu Ngư)</h3>
+                            <p>Loại ghe lớn dùng trong đánh bắt hải sản, thường được trang hoàng lộng lẫy để tham gia
+                                phần rước linh trong lễ Cầu Ngư ở cửa biển Thuận An.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-7"></div>
+                        <div class="card-content">
+                            <h3>Thuyền Cung Đình (Ngự Chu)</h3>
+                            <p>Ghe được phục dựng theo nguyên bản cung đình Huế với sắc sơn son thếp vàng, chạm khắc tứ
+                                linh trang trọng trên thân gỗ quý.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-8"></div>
+                        <div class="card-content">
+                            <h3>Ghe Câu Nghịch</h3>
+                            <p>Được cải biên từ những chiếc ghe phụ trợ đánh bắt thủy sản. Thân ghe được chuốt gọn lại
+                                để phục vụ đua phong trào ở các thôn xóm.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-9"></div>
+                        <div class="card-content">
+                            <h3>Ghe Đồng Đội (Ghe 9 - 11 người)</h3>
+                            <p>Kích thước chuẩn được đưa vào thi đấu trong Lễ hội Đua ghe truyền thống tỉnh Thừa Thiên
+                                Huế với 9 hoặc 11 tay chèo vạm vỡ.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="boat-card">
+                        <div class="card-image bg-10"></div>
+                        <div class="card-content">
+                            <h3>Thuyền Tế (Ghe Rước Linh)</h3>
+                            <p>Dùng để chở mâm cỗ, hương án và các bậc bô lão đi dọc sông Hương để làm lễ tế thủy thần
+                                trước khi khai mạc hội đua ghe.</p>
+                            <a href="#" class="btn-text">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination Dots -->
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content container text-center hidden zoom-in">
+                <h2>Tham Gia Lễ Hội Sắp Tới</h2>
+                <p>Trải nghiệm không khí sôi động bên bờ sông Hương trong lễ hội đua ghe truyền thống tháng 9 này.</p>
+                <button class="cta-button primary">Nhận Lịch Trình</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fa-solid fa-water"></i> HUE RACING
+                    </div>
+                    <p>Bảo tồn và phát huy giá trị văn hóa đua ghe truyền thống của vùng đất Cố Đô.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Khám Phá</h4>
+                    <ul>
+                        <li><a href="products.html">Sản Phẩm</a></li>
+                        <li><a href="#about">Lịch sử</a></li>
+                        <li><a href="#gallery">Bộ sưu tập</a></li>
+                        <li><a href="#">Luật đua</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Liên Hệ</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Bến thuyền Sông Hương, TP. Huế, Việt Nam</p>
+                    <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                    <p><i class="fa-solid fa-envelope"></i> contact@hueracing.vn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hue Traditional Boat Racing.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

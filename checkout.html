@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - Ghe Đua Truyền Thống Huế</title>
+    <!-- Modern Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: var(--bg-light);">
+
+    <!-- Navigation -->
+    <nav class="navbar text-white" style="background: var(--primary-blue);">
+        <div class="logo">
+            <i class="fa-solid fa-water"></i> HUE RACING
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Sản Phẩm</a></li>
+            <li><a href="index.html#about">Lịch sử</a></li>
+            <li><a href="index.html#contact">Liên hệ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon" id="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge-count">0</span>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header"
+        style="background: linear-gradient(rgba(10, 58, 94, 0.8), rgba(10, 58, 94, 0.8)), url('images/duaghe2-9.jpg') center/cover; padding: 120px 0 60px;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 3rem;">Thanh Toán Đơn Hàng</h1>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section" style="padding: 2rem 0 6rem;">
+        <div class="container">
+            <div class="checkout-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+
+                <!-- Checkout Form -->
+                <div class="checkout-form box-shadow">
+                    <h2 class="form-title">Thông Tin Thanh Toán</h2>
+
+                    <form id="checkout-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Họ và Tên *</label>
+                                <input type="text" id="fullname" name="fullname" required
+                                    placeholder="Nhập họ tên của bạn">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="phone">Số điện thoại *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="09xxxxxxxxx">
+                            </div>
+                            <div class="form-group half">
+                                <label for="email">Địa chỉ Email</label>
+                                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="address">Địa chỉ giao nhận *</label>
+                                <input type="text" id="address" name="address" required
+                                    placeholder="Số nhà, đường, phường/xã...">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Tỉnh / Thành phố *</label>
+                                <select id="city" name="city" required>
+                                    <option value="">Chọn Tỉnh/Thành phố</option>
+                                    <option value="hue">Thừa Thiên Huế</option>
+                                    <option value="danang">Đà Nẵng</option>
+                                    <option value="hanoi">Hà Nội</option>
+                                    <option value="hcm">TP. Hồ Chí Minh</option>
+                                    <option value="other">Tỉnh khác</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="note">Ghi chú đơn hàng (tuỳ chọn)</label>
+                                <textarea id="note" name="note" rows="4"
+                                    placeholder="Ví dụ: Cần thay đổi kích thước, màu sơn..."></textarea>
+                            </div>
+                        </div>
+
+                        <h2 class="form-title" style="margin-top: 2rem;">Phương thức thanh toán</h2>
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="transfer" checked>
+                                <span class="radio-custom"></span>
+                                Chuyển khoản ngân hàng (Đặt cọc 50%)
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod">
+                                <span class="radio-custom"></span>
+                                Giao hàng thu tiền (Thanh toán phần còn lại)
+                            </label>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary-box">
+                    <h3 class="box-title">Đơn Hàng Của Bạn</h3>
+
+                    <div class="order-items" id="checkout-order-items">
+                        <!-- Items injected by JS -->
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-details">
+                        <div class="detail-row">
+                            <span>Tạm tính</span>
+                            <span id="checkout-subtotal">0 đ</span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Phí vận chuyển</span>
+                            <span>Sẽ thông báo sau</span>
+                        </div>
+                        <div class="detail-row total">
+                            <span>Tổng thanh toán</span>
+                            <span class="total-price" id="checkout-total">0 đ</span>
+                        </div>
+                    </div>
+
+                    <p class="terms-text">Bằng việc đặt hàng, bạn đồng ý với <a href="#">Điều khoản sử dụng</a> và <a
+                            href="#">Chính sách bảo mật</a> của chúng tôi.</p>
+
+                    <button type="button" class="btn-primary place-order-btn" id="place-order-btn"
+                        style="width: 100%; border: none;">Xác Nhận Đặt Hàng</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-water"></i> HUE RACING
+                </div>
+                <p>Bảo tồn và phát huy giá trị văn hóa đua ghe truyền thống của vùng đất Cố Đô.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Khám Phá</h4>
+                <ul>
+                    <li><a href="products.html">Sản Phẩm</a></li>
+                    <li><a href="index.html#about">Lịch sử</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Liên Hệ</h4>
+                <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@hueracing.vn</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderCheckoutPage === 'function') {
+                renderCheckoutPage();
+            }
+
+            document.getElementById('place-order-btn').addEventListener('click', function () {
+                const form = document.getElementById('checkout-form');
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                // process order mockup
+                showToast('Đặt hàng thành công!', 'Cảm ơn quý khách đã đặt hàng. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.');
+
+                // Clear cart
+                setTimeout(() => {
+                    localStorage.removeItem('hueRacingCart');
+                    window.location.href = 'index.html';
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+
+</html>
