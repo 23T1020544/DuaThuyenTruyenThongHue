@@ -435,19 +435,19 @@ ul {
 }
 
 .bg-1 {
-    background-image: url('images/ghe1.jpg');
+    background-image: url('ghe1.jpg');
 }
 
 .bg-2 {
-    background-image: url('images/ghe2.jpg');
+    background-image: url('ghe2.jpg');
 }
 
 .bg-3 {
-    background-image: url('images/ghe3.jpg');
+    background-image: url('ghe3.jpg');
 }
 
 .bg-4 {
-    background-image: url('images/ghe4.jpg');
+    background-image: url('ghe4.jpg');
 }
 
 .bg-5 {
@@ -1836,4 +1836,5 @@ footer {
     .form-group.half {
         width: 100%;
     }
+
 }
